@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Caveat:wght@500;700&family=Quicksand:wght@400;500;600&display=swap');
+
+@layer base {
+	:root {
+		/* Baby boy storybook palette */
+		--background: 205 80% 96%;
+		--foreground: 218 45% 28%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 218 45% 28%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 218 45% 28%;
+
+		/* Soft baby blue */
+		--primary: 207 75% 65%;
+		--primary-foreground: 0 0% 100%;
+
+		/* Cream cloud */
+		--secondary: 200 90% 92%;
+		--secondary-foreground: 218 45% 28%;
+
+		--muted: 205 60% 94%;
+		--muted-foreground: 215 30% 50%;
+
+		/* Warm honey/star yellow */
+		--accent: 45 95% 78%;
+		--accent-foreground: 30 60% 28%;
+
+		--destructive: 0 70% 65%;
+		--destructive-foreground: 0 0% 100%;
+
+		--border: 205 60% 88%;
+		--input: 205 60% 90%;
+		--ring: 207 75% 65%;
+
+		--radius: 1.5rem;
+
+		/* Custom story tokens */
+		--sky-top: 205 95% 92%;
+		--sky-bottom: 200 85% 85%;
+		--cloud: 0 0% 100%;
+		--teddy: 28 45% 60%;
+		--teddy-dark: 25 40% 45%;
+		--star: 48 100% 70%;
+		--bubble: 200 80% 96%;
+
+		--gradient-sky: linear-gradient(180deg, hsl(var(--sky-top)) 0%, hsl(var(--sky-bottom)) 100%);
+		--gradient-soft: linear-gradient(135deg, hsl(205 90% 94%) 0%, hsl(195 80% 90%) 100%);
+		--gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(205 90% 97%) 100%);
+
+		--shadow-soft: 0 10px 40px -10px hsl(207 70% 55% / 0.25);
+		--shadow-cloud: 0 20px 60px -15px hsl(207 80% 60% / 0.3);
+		--shadow-cute: 0 8px 0 hsl(207 60% 80%);
+
+		--sidebar-background: 0 0% 98%;
+		--sidebar-foreground: 240 5.3% 26.1%;
+		--sidebar-primary: 240 5.9% 10%;
+		--sidebar-primary-foreground: 0 0% 98%;
+		--sidebar-accent: 240 4.8% 95.9%;
+		--sidebar-accent-foreground: 240 5.9% 10%;
+		--sidebar-border: 220 13% 91%;
+		--sidebar-ring: 217.2 91.2% 59.8%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+		font-family: 'Quicksand', sans-serif;
+		background: var(--gradient-sky);
+		background-attachment: fixed;
+		overflow-x: hidden;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: 'Fredoka', sans-serif;
+		font-weight: 600;
+	}
+
+	.font-script {
+		font-family: 'Caveat', cursive;
+	}
+
+	.font-display {
+		font-family: 'Fredoka', sans-serif;
+	}
+}
+
+@layer utilities {
+	.text-shadow-soft {
+		text-shadow: 0 2px 0 hsl(207 60% 85%), 0 4px 12px hsl(207 70% 60% / 0.3);
+	}
+
+	.bg-storybook {
+		background: var(--gradient-sky);
+	}
+
+	.bg-card-soft {
+		background: var(--gradient-card);
+	}
+
+	.shadow-soft {
+		box-shadow: var(--shadow-soft);
+	}
+
+	.shadow-cloud {
+		box-shadow: var(--shadow-cloud);
+	}
+
+	.shadow-cute {
+		box-shadow: var(--shadow-cute);
+	}
+
+	.scalloped {
+		/* Cute scalloped/cloud border */
+		-webkit-mask: radial-gradient(circle 14px at 14px 14px, transparent 98%, #000 100%) -14px -14px;
+		mask: radial-gradient(circle 14px at 14px 14px, transparent 98%, #000 100%) -14px -14px;
+	}
+}
