@@ -10,6 +10,7 @@ import bunny from "@/assets/bunny.png";
 import { Calendar, Clock, MapPin } from "lucide-react";
 import fondoMP3 from "@/assets/music/fondo.mp3";
 
+
 // Event date — feel free to customize
 const EVENT_DATE = "2026-05-30T14:00:00";
 
@@ -134,6 +135,29 @@ const Index = () => {
 						>
 							💫
 						</motion.span>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={opened ? { opacity: 1 } : {}}
+						transition={{ delay: 1.2, duration: 0.8 }}
+						className="flex flex-col items-center gap-2 mt-2 mb-6"
+					>
+						<span className="font-script text-3xl text-primary/80">
+							Desliza para ver más
+						</span>
+						<motion.div
+							animate={{ y: [0, 10, 0] }}
+							transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+							className="w-7 h-11 rounded-full border-2 border-primary/50 bg-white/60 backdrop-blur flex items-start justify-center p-1.5 shadow-soft"
+							aria-hidden
+						>
+							<motion.span
+								animate={{ y: [0, 14, 0], opacity: [1, 0.2, 1] }}
+								transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+								className="block w-2 h-2 rounded-full bg-primary"
+							/>
+						</motion.div>
 					</motion.div>
 
 					<FadeUp delay={0.8}>
