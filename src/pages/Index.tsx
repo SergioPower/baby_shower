@@ -7,8 +7,6 @@ import { RsvpForm } from "@/components/RsvpForm";
 import heroBear from "@/assets/hero-bear.png";
 import elephant from "@/assets/elephant.png";
 import bunny from "@/assets/bunny.png";
-import babyItems from "@/assets/baby-items.png";
-import cloud from "@/assets/cloud.png";
 import { Calendar, Clock, MapPin } from "lucide-react";
 import fondoMP3 from "@/assets/music/fondo.mp3";
 
@@ -42,9 +40,9 @@ const SectionTitle = ({
 }) => (
 	<div className="text-center mb-8">
 		{pre && (
-			<p className="font-script text-2xl text-primary/80">{pre}</p>
+			<p className="font-script text-3xl text-primary/80">{pre}</p>
 		)}
-		<h2 className="font-display text-3xl md:text-5xl text-foreground text-shadow-soft">
+		<h2 className="font-display text-4xl md:text-5xl text-foreground text-shadow-soft">
 			{title}
 		</h2>
 		<div className="flex justify-center gap-1 mt-2">
@@ -139,10 +137,10 @@ const Index = () => {
 					</motion.div>
 
 					<FadeUp delay={0.8}>
-						<h1 className="font-display text-5xl md:text-7xl text-primary text-shadow-soft leading-none">
+						<h1 className="font-display text-6xl md:text-7xl text-primary text-shadow-soft leading-none">
 							Oliver
 							<br />
-							<span className="font-script text-6xl md:text-8xl text-[hsl(218_45%_28%)] block -mt-2">
+							<span className="font-script text-7xl md:text-8xl text-[hsl(218_45%_28%)] block -mt-2">
 								Noah
 							</span>
 						</h1>

@@ -144,7 +144,7 @@ export const RsvpForm = () => {
 					id="name"
 					value={formData.name}
 					onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-					placeholder="Ej. Aurelia Valencia"
+					placeholder="Nombre Completo"
 					className="mt-2 rounded-2xl border-2 border-border bg-white/80 h-12 font-body"
 				/>
 			</div>

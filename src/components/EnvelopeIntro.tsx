@@ -17,9 +17,9 @@ export const EnvelopeIntro = ({ onOpen }: Props) => {
 				initial={{ y: -20, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ delay: 0.3 }}
-				className="font-script text-3xl md:text-4xl text-primary mb-4"
+				className="font-script text-4xl md:text-5xl text-primary mb-4"
 			>
-				¡Tienes una sorpresa!
+				¡Tienes una invitación!
 			</motion.p>
 
 			<motion.button
